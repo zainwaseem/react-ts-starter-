@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Vite TypeScript Starter
 
-Currently, two official plugins are available:
+This project is a starter template for building a React application using Vite and TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **React**: Build interactive UIs.
+- **Vite**: Fast build tool for modern web projects.
+- **TypeScript**: Static typing for robust development.
 
-## Expanding the ESLint configuration
+## Prerequisites
+- Node.js (>= 16.x)  
+- npm (>= 8.x) or Yarn  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/zainwaseem/react-ts-starter-.git
+   cd react-ts-starter-
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Install dependencies:  
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Usage
+- Start the development server:  
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173`.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Build for production:  
+   ```bash
+   npm run build
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Preview the production build:  
+   ```bash
+   npm run preview
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## File Structure
+- **`src`**: Contains application code.
+  - **`components`**: Reusable UI components.
+  - **`assets`**: Static assets like images.
+  - **`styles`**: Global styles.
+
+## License
+[MIT](LICENSE)
+
+---
